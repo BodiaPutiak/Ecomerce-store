@@ -1,0 +1,60 @@
+@import '../../colors.scss';
+@import '../../mixins.scss';
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+
+    .news-letter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        background: gray;
+
+        form {
+            display: flex;
+            gap: 10px;
+            max-width: 70%;
+            input {
+                width: 50%;
+            }            
+            button {
+                @include banner-button-styles($white, $black);
+                border: none;
+                padding: 7px;
+            }
+        }
+    }
+
+    .footer-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $black;
+        color: $white;
+        width: 100%;
+        height: 100px;
+        ul {
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            li {
+                cursor: pointer;
+                &:hover {
+                    border-bottom: $white solid;
+                }
+            }
+        }
+    }
+}

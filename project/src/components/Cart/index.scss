@@ -1,0 +1,80 @@
+@import '../../colors.scss';
+@import '../../mixins.scss';
+
+.cart-header-flex {
+    display: flex;
+}
+
+.cart-items {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    li {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        padding: 20px;
+        border: solid $black 2px;
+        gap: 10px;
+        .img-container {
+            max-width: 150px;
+            img {
+                height: 100%;
+                max-width: 100%;
+
+            }
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            background-color: $gray;
+            width: 100%;
+            padding: 25px;
+            .description-price-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h2 {
+                    font-size: 25px;
+                    font-weight: 300;
+                }
+            }
+            .buttons-container {
+                display: flex;
+                align-items: center;
+
+        
+                h2 {
+                    margin: 0;
+                    padding: 11px 15px;
+                    background: #fff;
+                }
+                button {
+                    width: 40px;
+                    padding: 3px 10px;
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: 700;
+                    border: none;
+                    background: #000;
+                    cursor: pointer;
+                }  
+                .delete-button {
+                    height: 40px;
+                    position: relative;
+                    margin-left: 25px;
+                    svg {
+                        position: absolute;
+                        height: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
