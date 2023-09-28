@@ -70,13 +70,14 @@ header {
         }
     }
     .cart-container {
+        direction: rtl;
         z-index: 100;
         position: fixed;
         padding-inline: 20px;
         right: -200%;
         top: 0;
         bottom: 0;
-        width: 600px;
+        max-width: 600px;
         background: #fff;
         overflow-y: scroll;
         transition: all 0.8s ease-out;

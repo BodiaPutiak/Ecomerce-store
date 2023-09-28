@@ -9,7 +9,18 @@ function TrendingProducts() {
     const navigator = useNavigate()
 
     
-    const totalSlides = 4;
+    let totalSlides = 8;
+    let valueToSkip = 23;
+    const updateTotalSlides = () => {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            valueToSkip = 50;
+        } else if (window.matchMedia("(max-width: 500px)").matches)  {
+            valueToSkip = 500;
+        }
+    };
+
+    // Initial update of totalSlides
+    updateTotalSlides();
 
     const handleRightButton = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
@@ -25,7 +36,7 @@ function TrendingProducts() {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     };
 
-    const translateX = `translateX(${currentSlide * - 33.5}%)`;
+    const translateX = `translateX(${currentSlide * -valueToSkip}%)`;
 
     const handleRedirectToProduct = (id) => {
         navigator(`/product?id=${encodeURIComponent(id)}`)

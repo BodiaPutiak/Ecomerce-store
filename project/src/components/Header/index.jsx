@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCartShopping, faXmark } from '@fortawesome/free-solid-svg-icons';
 import NavBar from './NavBar';
 import Cart from '../Cart';
+import EmptyCart from '../Cart/EmptyCart';
 import logo from '../../assets/img/logo/black-transparent-logo.svg';
 import './index.scss'; 
 
@@ -48,7 +49,7 @@ function Header() {
                     </button>
                 </div>
                 <div className={`cart-container ${openCart ? 'show' : ''}`}>
-                    <Cart />
+                    {totalQuantity === 0 ? <EmptyCart/> : <Cart />}
                     <FontAwesomeIcon icon={faXmark}  onClick={handleCart}/>
                 </div>
                 <div className={`darken-bg ${openCart ? 'show' : ''}`}></div>

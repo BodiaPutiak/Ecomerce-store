@@ -3,9 +3,11 @@
 
 .cart-header-flex {
     display: flex;
+    direction: ltr;
 }
 
 .cart-items {
+    direction: ltr;
     padding: 0;
     list-style: none;
     display: flex;
@@ -78,3 +80,23 @@
         }
     }
 }
+
+.empty-cart-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+
+
+    img {
+        padding: 100px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    button {
+        @include banner-button-styles($black, $white);
+    }
+}
+

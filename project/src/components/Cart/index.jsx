@@ -2,7 +2,6 @@ import { useCart } from '../../context/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import './index.scss';
-import { useState } from 'react';
 
 function Cart() {
     const { cartItems, totalQuantity, removeFromCart, incrementQuantity, decrementQuantity } = useCart();
