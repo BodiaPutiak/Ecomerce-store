@@ -9,7 +9,7 @@ function Footer() {
                     <input type="email" placeholder='your@emali.com'/>
                     <button type='submit'>SUBSCRIBE</button>
                 </form>
-                
+                <h5>All right reserved - BP Media</h5>
             </div>
             <div className="footer-nav">
                 <ul>
